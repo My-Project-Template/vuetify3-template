@@ -6,6 +6,9 @@ module.exports = {
     env: {
         node: true,
         es6: true,
+        es2022: true,
+        // 必须设置这一行, 否则会提示编译宏未定义的错误!
+        'vue/setup-compiler-macros': true,
     },
     extends: [
         'plugin:vue/vue3-essential',
@@ -16,7 +19,7 @@ module.exports = {
     ],
     parser: 'vue-eslint-parser',
     parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 2022,
         sourceType: 'module',
         parser: '@typescript-eslint/parser',
         ecmaFeatures: {
@@ -53,6 +56,5 @@ module.exports = {
             },
         ],
         'vue/multi-word-component-names': 'off',
-        'vue/setup-compiler-macros': true,
     },
 };
