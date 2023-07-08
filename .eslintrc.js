@@ -53,5 +53,6 @@ module.exports = {
             },
         ],
         'vue/multi-word-component-names': 'off',
+        'vue/setup-compiler-macros': true,
     },
 };
