@@ -49,7 +49,7 @@ module.exports = {
                 endOfLine: 'auto',
             },
             {
-                usePrettierrc: false,
+                usePrettierrc: true,
             },
         ],
         'vue/multi-word-component-names': 'off',
