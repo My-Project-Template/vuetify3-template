@@ -28,11 +28,7 @@ module.exports = defineConfig({
             addStyleResource(config.module.rule('scss').oneOf(type));
         });
 
-        config.resolve.alias
-            .set('balm-ui-plus', 'balm-ui/dist/balm-ui-plus.js')
-            .set('balm-ui-css', 'balm-ui/dist/balm-ui.css')
-            .end()
-            .end()
+        config
             .plugin('vuetify-plugin')
             .use(VuetifyPlugin, [
                 {
