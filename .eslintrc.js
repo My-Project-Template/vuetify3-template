@@ -33,7 +33,7 @@ module.exports = {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         semi: ['error', 'always'],
         quotes: ['error', 'single'],
-        indent: ['error', 4],
+        indent: ['error', 4, { SwitchCase: 1 }],
         'prettier/prettier': [
             'error',
             {
