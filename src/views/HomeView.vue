@@ -1,6 +1,7 @@
 <template>
     <div class="home">
         <v-btn class="home-btn">Vuetify Button</v-btn>
+        <v-icon icon="mdi-checkbox-marked-circle"></v-icon>
     </div>
 </template>
 
