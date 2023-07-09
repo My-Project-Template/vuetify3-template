@@ -1,15 +1,15 @@
 <template>
     <div class="home">
-        <p class="home-text">你好!</p>
-        <ui-button>Text</ui-button>
+        <v-btn class="home-btn">Vuetify Button</v-btn>
     </div>
 </template>
 
 <style lang="scss" scoped>
-@use '@material/theme' as colour;
+@use '../assets/styles/scss/_settingv';
+
 .home {
-    &-text {
-        color: colour.$red-500;
+    &-btn {
+        height: settingv.$button-height;
     }
 }
 </style>

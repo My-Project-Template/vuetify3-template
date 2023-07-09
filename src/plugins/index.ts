@@ -1,6 +1,5 @@
-import BalmUI from 'balm-ui'; // Official Google Material Components
-import BalmUIPlus from 'balm-ui-plus'; // BalmJS Team Material Components
+import { createVuetify } from 'vuetify';
 import router from '@/router';
 import { pinia } from '@/store';
 
-export const plugins = [BalmUI, BalmUIPlus, router, pinia];
+export const plugins = [router, pinia, createVuetify()];

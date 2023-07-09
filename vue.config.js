@@ -1,6 +1,9 @@
 const { defineConfig } = require('@vue/cli-service');
 const path = require('path');
 
+// plugins
+const { VuetifyPlugin } = require('webpack-plugin-vuetify');
+
 // add global scss
 function addStyleResource(rule) {
     rule.use('style-resource')
@@ -29,6 +32,15 @@ module.exports = defineConfig({
             .set('balm-ui-plus', 'balm-ui/dist/balm-ui-plus.js')
             .set('balm-ui-css', 'balm-ui/dist/balm-ui.css')
             .end()
+            .end()
+            .plugin('vuetify-plugin')
+            .use(VuetifyPlugin, [
+                {
+                    styles: {
+                        configFile: 'src/assets/styles/scss/_settingv.scss',
+                    },
+                },
+            ])
             .end();
     },
     devServer: {
