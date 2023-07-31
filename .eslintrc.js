@@ -36,21 +36,7 @@ module.exports = {
         indent: ['error', 4, { SwitchCase: 1 }],
         'prettier/prettier': [
             'error',
-            {
-                tabWidth: 4,
-                semi: true,
-                singleQuote: true,
-                bracketSpacing: true,
-                bracketSameLine: false,
-                singleAttributePerLine: true,
-                vueIndentScriptAndStyle: false,
-                printWidth: 120,
-                quoteProps: 'as-needed',
-                trailingComma: 'es5',
-                arrowParens: 'avoid',
-                proseWrap: 'never',
-                endOfLine: 'auto',
-            },
+            {},
             {
                 usePrettierrc: true,
             },
