@@ -6,11 +6,5 @@
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/scss/_settingv';
-
-.home {
-    &-btn {
-        height: settingv.$button-height;
-    }
-}
+@use '../assets/styles/scss/settingv' as vtf;
 </style>

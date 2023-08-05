@@ -1,3 +1,4 @@
+root: true
 extends:
   - stylelint-config-standard
   - stylelint-config-standard-scss
@@ -6,4 +7,4 @@ extends:
 plugins:
   - stylelint-prettier
 rules:
-  'prettier/prettier': True
+  'prettier/prettier': true
