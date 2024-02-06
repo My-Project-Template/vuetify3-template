@@ -15,9 +15,7 @@
         "baseUrl": ".",
         "types": ["webpack-env"],
         "paths": {
-            "@/*": ["src/*"],
-            "balm-ui-plus": ["node_modules/balm-ui/dist/balm-ui-plus.d.ts"],
-            "balm-ui-css": ["balm-ui/dist/balm-ui.css"]
+            "@/*": ["src/*"]
         },
         "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
     },

@@ -1,3 +1,1 @@
-/**
- * @description 全局组件出口
- */
+/** @description 全局组件出口 */
