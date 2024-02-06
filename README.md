@@ -1,13 +1,31 @@
-# Vuetify 3 模板
+# Vuetify 3 Vue Template
 
-## 使用方法
+## Install as Your project
 
-1. 将本库`clone`之后，首先`git remote remove origin`。然后换成你自己的源。
-2. 必要的话，删除`package-lock.json`，换成自定义的包管理器`npm`, `yarn`, `pnpm`等。如换`pnpm`，需注意`node >= 16`。
+1. `npx degit https://github.com/Allen-Bayern/vuetify3-template.git YOUR_FOLDER_NAME`
+2. If you want to use another package manager like `yarn` or `pnpm`, delete `package-lock.json`
+3. Make sure the node version is `>= 14` and LTS. If you use `pnpm` as your package manager tool, confirm the node version `>= 16`
 
-## 命令
+## Commands
 
-**开发**
+### Install dependencies
+
+```sh
+#npm
+npm i
+
+# yarn
+yarn
+
+# pnpm
+pnpm i
+
+# If you use pnpm at this project for the first time,
+# you'd better run the below command at once.
+pnpm up
+```
+
+### Develop
 
 ```sh
 #npm
@@ -20,8 +38,7 @@ yarn dev
 pnpm dev
 ```
 
-
-**构建**
+### Build
 
 ```sh
 #npm
