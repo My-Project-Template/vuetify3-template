@@ -1,1 +1,1 @@
-/** @description 全局组件出口 */
+/** @description Public components used by the project should be exported here */

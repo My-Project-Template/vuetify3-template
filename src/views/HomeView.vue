@@ -6,5 +6,5 @@
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/scss/settingv' as vtf;
+@use '../assets/styles/scss/conf-vuetify' as vuetifyConf;
 </style>

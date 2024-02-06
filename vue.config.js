@@ -4,18 +4,16 @@ const path = require('path');
 // plugins
 const { VuetifyPlugin } = require('webpack-plugin-vuetify');
 
-// add global scss
+/** @description Add global style-resource for scss file */
 function addStyleResource(rule) {
     rule.use('style-resource')
         .loader('style-resources-loader')
         .options({
             patterns: [
-                // 全局mixin, function
+                // global mixins and scss functions
                 path.resolve(__dirname, 'src/assets/styles/scss/_globals.scss'),
-                // 全局字体
+                // global fonts
                 path.resolve(__dirname, 'src/assets/styles/scss/_fonts.scss'),
-                // 全局公共文件
-                path.resolve(__dirname, 'src/assets/styles/scss/_publics.scss'),
             ],
         });
 }
@@ -33,7 +31,7 @@ module.exports = defineConfig({
             .use(VuetifyPlugin, [
                 {
                     styles: {
-                        configFile: 'src/assets/styles/scss/_settingv.scss',
+                        configFile: 'src/assets/styles/scss/_conf-vuetify.scss',
                     },
                 },
             ])

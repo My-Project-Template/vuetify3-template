@@ -6,8 +6,10 @@ module.exports = {
     env: {
         node: true,
         es6: true,
-        es2022: true,
-        // 必须设置这一行, 否则会提示编译宏未定义的错误!
+        es2023: true,
+        // This key must be true, or when using defineProps
+        // without import at <script setup></script>,
+        // the code will be taken as a mistake
         'vue/setup-compiler-macros': true,
     },
     extends: [
@@ -19,7 +21,7 @@ module.exports = {
     ],
     parser: 'vue-eslint-parser',
     parserOptions: {
-        ecmaVersion: 2022,
+        ecmaVersion: 2023,
         sourceType: 'module',
         parser: '@typescript-eslint/parser',
         ecmaFeatures: {

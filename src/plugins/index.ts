@@ -7,7 +7,7 @@ import { pinia } from '@/store';
 
 import type { Plugin } from 'vue';
 
-/** @description plugins used by this Vue application */
+/** @description Plugins used by this Vue application are exported here */
 export const plugins: Plugin[] = [
     router,
     pinia,

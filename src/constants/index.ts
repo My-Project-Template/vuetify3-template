@@ -1,3 +1,3 @@
-/** @description 全局常量出口 */
+/** @description Constants used by the project should be exported here */
 
-export { locale } from './global';
+export { locale } from './GlobalConfig';
