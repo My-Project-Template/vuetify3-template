@@ -13,10 +13,6 @@ export const plugins: Plugin[] = [
     pinia,
     createVuetify({
         blueprint,
-        date: {
-            adapter: new MomentUtils({
-                locale,
-            }),
-        },
+        date: { adapter: new MomentUtils({ locale }) },
     }),
 ];

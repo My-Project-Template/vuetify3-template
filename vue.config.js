@@ -10,10 +10,8 @@ function addStyleResource(rule) {
         .loader('style-resources-loader')
         .options({
             patterns: [
-                // global mixins and scss functions
-                path.resolve(__dirname, 'src/assets/styles/scss/_globals.scss'),
-                // global fonts
-                path.resolve(__dirname, 'src/assets/styles/scss/_fonts.scss'),
+                // global fonts, mixins and scss functions
+                path.resolve(__dirname, 'src/assets/styles/scss/_vars.scss'),
             ],
         });
 }
@@ -21,9 +19,25 @@ function addStyleResource(rule) {
 module.exports = defineConfig({
     transpileDependencies: true,
     lintOnSave: 'error',
+    css: {
+        loaderOptions: {
+            scss: { sourceMap: true },
+        },
+    },
     chainWebpack(config) {
         ['vue-modules', 'vue', 'normal-modules', 'normal'].forEach(type => {
             addStyleResource(config.module.rule('scss').oneOf(type));
+        });
+
+        // add resolve-url-loader
+        ['vue-modules', 'vue', 'normal-modules', 'normal'].forEach(rule => {
+            config.module
+                .rule('scss')
+                .oneOf(rule)
+                .use('resolve-url-loader')
+                .loader('resolve-url-loader')
+                .before('sass-loader')
+                .end();
         });
 
         config
