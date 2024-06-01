@@ -34,15 +34,9 @@ module.exports = {
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         semi: ['error', 'always'],
-        quotes: ['error', 'single'],
+        quotes: ['error', 'single', { avoidEscape: true }],
         indent: ['error', 4, { SwitchCase: 1 }],
-        'prettier/prettier': [
-            'error',
-            {},
-            {
-                usePrettierrc: true,
-            },
-        ],
+        'prettier/prettier': ['error', {}, { usePrettierrc: true }],
         'vue/multi-word-component-names': 'off',
     },
 };
